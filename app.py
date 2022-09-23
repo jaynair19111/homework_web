@@ -17,6 +17,7 @@ def index():
         cursor.execute(query)
 
         results = cursor.fetchall()
+        print(results)
 
         #This states that if the user and/or password is not found in user_data.db, then print this text.
         if len(results) == 0:
