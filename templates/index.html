@@ -1,68 +1,25 @@
 <!DOCTYPE html>
 <html lang"en" dir="ltr">
-  <head>
-  <style>
-    body {
-      background-color: rgb(87, 146, 223);
-    }
 
-    input[type=button], input[type=submit], input[type=reset] {
-      background-color: rgb(0, 172, 0);
-      border: none;
-      color: white;
-      padding: 15px 32px;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      font-size: 16px;
-      margin: 4px 2px;
-      cursor: pointer;
-      border-radius: 8px;
-      -webkit-transition-duration: 0.4s;
-      transition-duration: 0.4s;
-      margin-top: 10px;
-    }
+<head>
+  <link rel="stylesheet" href="../static/styles.css">
+  <title>Login</title>
+</head>
 
-    .button2:hover {
-      box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
-    }
+<body>
+  <center>
+    <h1 style="color:white; font-family: 'Courier New', Courier, monospace; font-size: 100px;"">HOMEWORK</h1>
+      <form method=" POST">
+      <br><br>
+      <input type="name" name="name" placeholder="Username">
+      <br>
+      <input type="password" name="password" placeholder="Password">
+      <br>
+      <input type="submit" value="Log In" class="button button2">
+      <!--<input type="button" value="Sign Up" class="button button2">-->
+      <a href="{{ url_for('signup') }}">Sign up</a>
+      </form>
+  </center>
+</body>
 
-    input[type=name] {
-      width: 50%;
-      box-sizing: border-box;
-      border: 2px solid #ccc;
-      border-radius: 4px;
-      font-size: 16px;
-      background-color: white;
-      padding: 12px 20px 12px 40px;
-    }
-
-    input[type=password] {
-      width: 50%;
-      box-sizing: border-box;
-      border: 2px solid #ccc;
-      border-radius: 4px;
-      font-size: 16px;
-      background-color: white;
-      padding: 12px 20px 12px 40px;
-      margin-top:20px;
-    }
-  </style>
-    <title>Login</title>
-  </head>
-  <body>
-    <center>
-      <h1 style="color:white; font-family: 'Courier New', Courier, monospace; font-size: 100px;"">HOMEWORK</h1>
-      <form method="POST">
-    <br><br>
-    <input type="name" name="name" placeholder="Username">
-    <br>
-    <input type="password" name="password" placeholder="Password">
-    <br>
-    <input type="submit" value="Log In" class="button button2">
-    <!--<input type="button" value="Sign Up" class="button button2">-->
-    <a href="{{ url_for('signup') }}"><button>Sign Up</button></a>
-  </form>
-    </center>
-  </body>  
 </html>
