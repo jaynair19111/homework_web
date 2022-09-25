@@ -1,7 +1,15 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect, g
 import sqlite3
 
 app = Flask(__name__)
+
+DATABASE = 'user_data.db'
+
+def get_db():
+    db = getattr(g, '_database', None)
+    if db is None:
+        db = g._database = sqlite3.connect('user_data.db')
+    return db
 
 @app.route('/login', methods=['GET','POST'])
 def index():
@@ -29,8 +37,16 @@ def index():
     
     return render_template('index.html')
 
-@app.route("/signup")
+@app.route("/signup", methods=["GET", "POST"])
 def signup():
+    if request.method == "POST":
+        cursor = get_db().cursor()
+        new_name = request.form["name"]
+        new_password = request.form["password"]
+        sql1 = "INSERT INTO users(name,password) VALUES (?,?)"
+        cursor.execute(sql1,(new_name, new_password))
+        get_db().commit()
+
     return render_template('signup.html')
 
 
