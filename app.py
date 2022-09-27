@@ -17,7 +17,7 @@ def homepage():
     return render_template("home.html")
 
 @app.route('/login', methods=['GET', 'POST'])
-def index():
+def login():
     if request.method == 'POST':
         connection = sqlite3.connect('user_data.db')
         cursor = connection.cursor()
@@ -48,7 +48,7 @@ def index():
 @app.route("/loggedin")
 def loginhompeage():
     if session['loggedin'] == 'true':
-        return render_template(index)
+        return render_template(login)
 
 @app.route("/accountcreation")
 def accountcreated():
