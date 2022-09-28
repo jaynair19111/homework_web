@@ -22,6 +22,18 @@
     font-family: 'Poppins', sans-serif;
     font-size: 50px;
   }
+
+  .button {
+  font: bold 11px Arial;
+  text-decoration: none;
+  background-color: #EEEEEE;
+  color: #333333;
+  padding: 2px 6px 2px 6px;
+  border-top: 1px solid #CCCCCC;
+  border-right: 1px solid #333333;
+  border-bottom: 1px solid #333333;
+  border-left: 1px solid #CCCCCC;
+}
   </style>
 </head>
 
@@ -30,14 +42,24 @@
 
   <div class="HomepageTitle"><h1>HOMEWORK TRACKER</h1></div>
   <div class="TextPage">
-  <h2>Welcome to the Homework Tracker</h2>
-  <p>Read the following below to learn more about the website</p>
-  <p>The homework tracker is a website that you can use to login and track your homework or to keep notes and dates of future tasks.
-    in order to use the website you must login or create an account to be able to access your own personal homework tracker.
-  </p>
+    <h2>Welcome to the Homework Tracker</h2>
+    <p>Read the following below to learn more about the website</p>
+    <p>The homework tracker is a website that you can use to login and track your homework or to keep notes and dates of future tasks. in order to use the website you must login or create an account to be able to access your own personal homework tracker.    
+    </p>
   </div>
 
-  <li><a href="login">Login</a></li>
-  <li><a href="signup">Sign Up</a></li>
+  <div class="flex-container"
+    <form method="GET" action="login">
+    <input type="submit" value="Login">
+    </form>
+<!--<a href="login">Login</a>-->
+    <form method="GET" action="signup">
+    <input type="submit" value="Sign Up">
+    </form>
+  </div>
+  <!--<a href="signup">Sign Up</a>-->
+  
   </center>
+
+
 </body>

@@ -1,10 +1,26 @@
+/*Imports*/
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
 
+/*Background styling*/
+  body {
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+}
 
-body {
-    background-color: #121212;
-  }
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
 
+/*button styling*/
   input[type=button], input[type=submit], input[type=reset] {
     background-color: rgb(0, 172, 0);
     border: none;
@@ -22,10 +38,19 @@ body {
     margin-top: 10px;
   }
 
+  flex-container {
+    display: flex;
+    margin: 1px;
+    padding: 2px;
+    align-items: center;
+    justify-content: center;
+  }
+
   .button2:hover {
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
   }
 
+/*input styling*/
   input[type=name] {
     width: 50%;
     box-sizing: border-box;
