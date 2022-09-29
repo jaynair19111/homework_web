@@ -120,11 +120,18 @@
   }
 
   td, th {
-    border: 1px solid #dddddd;
+    border: 5px solid #dddddd;
     text-align: left;
     padding: 8px;
   }
 
-  tr:nth-child(even) {
-    background-color: #121212;
+  th {
+    background-color: #4d4a81;
+    color: white;
   }
+
+  tr:nth-child(even) {
+    background-color: rgb(52, 52, 52);
+  }
+  
+  tr:hover {background-color: rgb(70, 70, 70);}
