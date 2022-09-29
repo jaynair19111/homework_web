@@ -12,6 +12,12 @@ def get_db():
         db = g._database = sqlite3.connect('user_data.db')
     return db
 
+@app.teardown_appcontext
+def close_connection(exception):
+    db = getattr(g, '_database', None)
+    if db is not None:
+        db.close()
+
 @app.route('/')
 def homepage():
     return render_template("home.html")
@@ -65,6 +71,14 @@ def signup():
         get_db().commit()
 
     return render_template('signup.html')
+
+@app.route("/database")
+def databasepage():
+    cursor = get_db().cursor()
+    sql = "SELECT * FROM subject_data"
+    cursor.execute(sql)
+    results = cursor.fetchall()
+    return render_template('database.html', results=results)
 
 
 if __name__ == "__main__":

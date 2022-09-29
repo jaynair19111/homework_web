@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang"en" dir="ltr">
+
+<head>
+    <link rel="stylesheet" href="../static/styles.css">
+    <title>database</title>
+</head>
+
+<body>
+    <center>
+        <div class="HomepageTitle">
+            <h1>HOMEWORK DATA</h1>
+        </div>
+    </center>
+    <table>
+        <tr>
+            <th>User</th>
+            <th>Subject</th>
+            <th>Homework</th>
+            <th>Due</th>
+        </tr>
+        {% for item in results %}
+        <tr>
+            <td>{{ item[1] }}</td>
+            <td>{{ item[2] }}</td>
+            <td>{{ item[3] }}</td>
+            <td>{{ item[4] }}</td>
+        </tr>
+        {%endfor%}
+    </table>
+</body>
+
+</html>
