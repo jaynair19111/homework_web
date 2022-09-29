@@ -29,7 +29,9 @@
             <td>
                 <form action="/delete" method="post">
                     <input type="hidden" name="item_name" value="{{item[0]}}">
-                    <input type="submit" value="delete">
+                    <div class = deletebutton>
+                        <input type="submit" value="delete">
+                    </div>
                 </form>
             </td>
         </tr>
@@ -41,10 +43,10 @@
                 <h2>Enter a new task</h2>
             </div>
 
-            <input type="text" name="item_name">
-            <input type="text" name="item_subject">
-            <input type="text" name="item_homework">
-            <input type="text" name="item_due">
+            <input type="data" name="item_name" placeholder="UserID">
+            <input type="data" name="item_subject" placeholder="Subject">
+            <input type="data" name="item_homework" placeholder="Homework Task">
+            <input type="data" name="item_due" placeholder="Due">
             <input type="submit" value="add">
         </form>
     </center>
